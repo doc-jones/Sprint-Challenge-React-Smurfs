@@ -5,11 +5,18 @@ import SmurfForm from './components/SmurfForm';
 import Smurfs from './components/Smurfs';
 import axios from 'axios';
 
+import { Router, Route, Link } from 'react-router';
+
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      smurfs: [],
+      smurfs: {
+        id: '',
+        name: '',
+        age: '',
+        height: ''
+      }
     };
   }
   // add any needed code to ensure that the smurfs collection exists on state and it has data coming from the server
@@ -22,6 +29,24 @@ class App extends Component {
         .catch(err => console.log(err));
     }
 
+    changeHandler = ev => {
+      let value = ev.target.value;
+      const name = ev.target.name;
+      }
+  
+      this.setState(prevState => ({
+        smurf: {
+          ...prevState.smurf,
+          [name]: value
+        }
+      }));
+    };
+  
+    handleSubmit = e => {
+      e.preventDefault();
+      this.props.addSmurf(this.state.smurf);
+    };
+  
 
   render() {
     return (
@@ -31,6 +56,6 @@ class App extends Component {
       </div>
     );
   }
-}
+
 
 export default App;
