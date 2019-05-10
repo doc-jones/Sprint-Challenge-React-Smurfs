@@ -5,7 +5,7 @@ import SmurfForm from './components/SmurfForm';
 import Smurfs from './components/Smurfs';
 import axios from 'axios';
 
-import { Route, NavLink } from 'react-router';
+import { Route, NavLink } from 'react-router-dom';
 import Smurf from './components/Smurf';
 
 class App extends Component {
