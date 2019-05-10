@@ -49,7 +49,7 @@ class App extends Component {
       <Route
     path="/smurfs/:id"
     render={props => (
-      <Smurf {...props} smurfs={this.state.smurfs} deleteItem={this.deleteSmurf}
+      <Smurf {...props} smurfs={this.state.smurfs} deleteSmurf={this.deleteSmurf}
         setUpdateForm={this.setUpdateForm}
       />
     )}
