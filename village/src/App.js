@@ -8,12 +8,14 @@ import axios from 'axios';
 import { Route, NavLink } from 'react-router-dom';
 import Smurf from './components/Smurf';
 
+
+let id = '';
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       smurfs: [],
-      id: null
+      id: id
     };
   }
   // add any needed code to ensure that the smurfs collection exists on state and it has data coming from the server
@@ -55,7 +57,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-                <nav>
+          <nav>
           <h1 className="smurf-header">Smurfs </h1>
           <div className="nav-links">
             <NavLink to="/smurf-form">Add Smurf</NavLink>
