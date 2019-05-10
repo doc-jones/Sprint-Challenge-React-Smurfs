@@ -24,7 +24,7 @@ class App extends Component {
     componentDidMount() {
       axios
         .get(`http://localhost:3333/smurfs/`)
-        .then(res => this.setState(prevState=>{ smurfs: res.data }))
+        .then(res => this.setState(prevState=>({ smurfs: res.data })))
         // console.log(res.data);
         .catch(err => console.log(err));
     }
