@@ -28,7 +28,28 @@ class App extends Component {
     }
 
     
-
+    removeSmurf =(i)=>{
+      id = this.state.smurfs[i].id
+      axios.delete(`http://localhost:3333/smurfs/${id}`)
+      .then(res=>{
+        this.setState(prevState=>({smurfs: res.data}))
+  
+      })
+      .catch(err=>console.log(err))
+    }
+    updateSmurfs = ()=>{
+      axios.get(`http://localhost:3333/smurfs`)
+        .then(res => {
+          //console.log(response.data)
+          console.log('in updatesmurfs')
+          this.setState(prevState=>({smurfs:res.data}))
+        })
+        .catch(err => console.log(err))
+    }
+    changeSmurf=(i)=>{
+      id = this.state.smurfs[i].id;
+      this.context.history.push(`/smurf-form`)
+  }
   
 
   render() {
