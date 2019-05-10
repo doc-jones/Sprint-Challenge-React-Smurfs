@@ -1,3 +1,102 @@
-.App {
-  text-align: center;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  border-bottom: 1px solid #efefef;
+  margin-bottom: 32px;
+}
+
+nav h1{
+  color:dodgerblue;
+  font-size:48px;
+
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #1c5d76;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.nav-links a:last-of-type {
+  margin-right: 0;
+}
+
+.nav-links a.active {
+  border-bottom: 1px solid #1c5d76;
+}
+
+
+.smurfs{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+}
+.smurfs ul{
+  max-width: 100%;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.Smurf{
+  max-width: 100%;
+  margin: 20px 10% 20px 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 2% 20px 2%;
+  border: 1px solid navy
+}
+
+.Smurf h3{
+  color:dodgerblue;
+  font-size:25px;
+
+}
+.Smurf strong{
+  color:slategray;
+  font-size:20px;
+}
+
+.Smurf p{
+  color: slategray;
+}
+
+.SmurfForm form{
+  max-width: 25%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.SmurfForm input{
+  margin: 10px 0 10px 0;
+  height:20px;
+}
+
+.heading-smurf{
+  display: flex;
+  justify-content: space-between;
+}
+.delete{
+  margin-right:70%;
+}
+
+.SmurfForm button{
+  width:50%;
+  height: 30px;
+  color: dodgerblue;
+  background: whitesmoke;
+  margin: 0 auto;
+  border: 1px solid navy;
+
 }
